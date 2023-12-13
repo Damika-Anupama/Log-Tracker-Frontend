@@ -15,10 +15,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { ThemeProvider, createTheme, styled } from '@mui/material/styles';
 import * as React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import SaveUser from './Components/SaveUser';
 import ViewUser from './Components/ViewUsers';
-import { mainListItems } from './listItems';
+import { MainListItems } from './listItems';
 
 function Copyright(props: any) {
   return (
@@ -140,7 +140,7 @@ export default function Dashboard() {
           </Toolbar>
           <Divider />
           <List component="nav">
-            {mainListItems}
+            <MainListItems/>
           </List>
         </Drawer>
         <Box
