@@ -19,6 +19,7 @@ import { Route, Routes } from 'react-router-dom';
 import SaveUser from './Components/SaveUser';
 import ViewUser from './Components/ViewUsers';
 import { MainListItems } from './listItems';
+import GetLogs from './Components/GetLogs';
 
 function Copyright(props: any) {
   return (
@@ -163,6 +164,7 @@ export default function Dashboard() {
                     <Routes>
                       <Route path="/" element={<SaveUser />} />
                       <Route path="view" element={<ViewUser />} />
+                      <Route path="logs" element={<GetLogs />} />
                     </Routes>
                 </Paper>
               </Grid>

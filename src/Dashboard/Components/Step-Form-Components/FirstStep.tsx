@@ -76,21 +76,28 @@ export default function FirstStep() {
             fullWidth
             select
             SelectProps={{
-              native: true
+              native: true,
             }}
-            label='Gender'
-            name='gender'
+            label="Gender"
+            name="gender"
             value={gender.value}
             onChange={handleChange}
             error={!!gender.error}
             helperText={gender.error}
             required={gender.required}
+            sx={{
+              '& select': {
+                paddingLeft: '10px',
+                borderRadius: '5px',
+              },
+            }}
           >
-            <option value=''> </option>
-            <option value='Male'>Male</option>
-            <option value='Female'>Female</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
           </TextField>
         </Grid>
+
       </Grid>
 
       <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
