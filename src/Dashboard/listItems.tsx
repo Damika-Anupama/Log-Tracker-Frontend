@@ -1,11 +1,10 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import ForwardIcon from '@mui/icons-material/Forward';
+import SaveIcon from '@mui/icons-material/Save';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import PeopleIcon from '@mui/icons-material/People';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import GradingIcon from '@mui/icons-material/Grading';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export const MainListItems: React.FC = () => {
   const location = useLocation();
@@ -18,20 +17,9 @@ export const MainListItems: React.FC = () => {
         selected={location.pathname === '/'}
       >
         <ListItemIcon>
-          <PeopleIcon />
+          <SaveIcon />
         </ListItemIcon>
-        <ListItemText primary="Save User" />
-      </ListItemButton>
-
-      <ListItemButton
-        component={Link}
-        to="/view"
-        selected={location.pathname === '/view'}
-      >
-        <ListItemIcon>
-          <BarChartIcon />
-        </ListItemIcon>
-        <ListItemText primary="View Users" />
+        <ListItemText primary="Save Logs" />
       </ListItemButton>
 
       <ListItemButton
@@ -40,7 +28,7 @@ export const MainListItems: React.FC = () => {
         selected={location.pathname === '/logs'}
       >
         <ListItemIcon>
-          <GradingIcon />
+          <ForwardIcon />
         </ListItemIcon>
         <ListItemText primary="Get Logs" />
       </ListItemButton>

@@ -16,10 +16,9 @@ import Typography from '@mui/material/Typography';
 import { ThemeProvider, createTheme, styled } from '@mui/material/styles';
 import * as React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import SaveUser from './Components/SaveUser';
-import ViewUser from './Components/ViewUsers';
-import { MainListItems } from './listItems';
 import GetLogs from './Components/GetLogs';
+import SaveUser from './Components/SaveLogs';
+import { MainListItems } from './listItems';
 
 function Copyright(props: any) {
   return (
@@ -141,7 +140,7 @@ export default function Dashboard() {
           </Toolbar>
           <Divider />
           <List component="nav">
-            <MainListItems/>
+            <MainListItems />
           </List>
         </Drawer>
         <Box
@@ -161,11 +160,10 @@ export default function Dashboard() {
             <Grid container spacing={3}>
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                    <Routes>
-                      <Route path="/" element={<SaveUser />} />
-                      <Route path="view" element={<ViewUser />} />
-                      <Route path="logs" element={<GetLogs />} />
-                    </Routes>
+                  <Routes>
+                    <Route path="/" element={<SaveUser />} />
+                    <Route path="logs" element={<GetLogs />} />
+                  </Routes>
                 </Paper>
               </Grid>
             </Grid>
