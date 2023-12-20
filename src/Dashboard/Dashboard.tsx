@@ -172,5 +172,5 @@ export default function Dashboard() {
         </Box>
       </Box>
     </ThemeProvider>
-  );
+  );  
 }
