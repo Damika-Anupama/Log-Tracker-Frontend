@@ -29,10 +29,10 @@ export default function Orders() {
       console.log(`Cursor direction: ${direction}, Coordinates: (${x}, ${y})`);
 
       // Log cursor result to the service
-      postLogService({
-        group: direction,
-        message: `(${x}, ${y})`,
-      });
+      // postLogService({
+      //   group: direction,
+      //   message: `(${x}, ${y})`,
+      // });
 
       lastCoordinates.current = { x, y };
     }
